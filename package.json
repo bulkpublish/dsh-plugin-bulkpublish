@@ -1,27 +1,68 @@
 {
   "name": "dsh-plugin-bulkpublish",
   "version": "0.1.0",
-  "description": "DeepSeek Harness plugin that connects dsh to the BulkPublish MCP server to schedule, publish and analyse social media posts across 15 platforms.",
+  "description": "DeepSeek Harness (dsh) plugin for BulkPublish: connects dsh to the BulkPublish MCP server so the model can draft, schedule, publish and analyse social media posts, manage media, and handle inbox conversations and comments across 15 social platforms.",
+  "icon": "assets/logo.png",
   "type": "module",
   "main": "lib/index.js",
-  "exports": { ".": "./lib/index.js", "./package.json": "./package.json" },
-  "files": ["lib", "cordis.patch.yml", "README.md", "LICENSE"],
+  "exports": {
+    ".": "./lib/index.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "assets",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
   "scripts": {
     "lint": "node --check lib/index.js && node --check lib/config.js",
     "test": "node --test test/",
     "check": "npm run lint && npm test"
   },
-  "keywords": ["dsh-plugin", "deepseek-harness", "dsh", "cordis", "mcp", "bulkpublish", "social-media", "scheduling"],
+  "keywords": [
+    "dsh-plugin",
+    "deepseek-harness",
+    "dsh",
+    "cordis",
+    "mcp",
+    "mcp-client",
+    "model-context-protocol",
+    "bulkpublish",
+    "social-media",
+    "social-media-management",
+    "scheduling",
+    "post-scheduler",
+    "content-calendar",
+    "analytics"
+  ],
   "license": "MIT",
-  "author": "BulkPublish (https://www.bulkpublish.com)",
-  "homepage": "https://www.bulkpublish.com/integrations/mcp-server/",
-  "repository": { "type": "git", "url": "git+https://github.com/bulkpublish/dsh-plugin-bulkpublish.git" },
-  "bugs": { "url": "https://github.com/bulkpublish/dsh-plugin-bulkpublish/issues" },
-  "publishConfig": { "access": "public" },
-  "dsh": { "bundle": { "patch": "./cordis.patch.yml" } },
+  "author": {
+    "name": "BulkPublish",
+    "url": "https://www.bulkpublish.com"
+  },
+  "homepage": "https://www.bulkpublish.com",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bulkpublish/dsh-plugin-bulkpublish.git"
+  },
+  "bugs": {
+    "url": "https://github.com/bulkpublish/dsh-plugin-bulkpublish/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
   "peerDependencies": {
     "@deepseek-ai/cordis": ">=4.0.1-rc.1",
     "@deepseek-ai/dsh-mcp-client": ">=0.0.1-rc.1"
   },
-  "engines": { "node": ">=20" }
+  "engines": {
+    "node": ">=20"
+  }
 }
