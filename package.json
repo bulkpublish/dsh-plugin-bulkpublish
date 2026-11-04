@@ -1,0 +1,27 @@
+{
+  "name": "dsh-plugin-bulkpublish",
+  "version": "0.1.0",
+  "description": "DeepSeek Harness plugin that connects dsh to the BulkPublish MCP server to schedule, publish and analyse social media posts across 15 platforms.",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": { ".": "./lib/index.js", "./package.json": "./package.json" },
+  "files": ["lib", "cordis.patch.yml", "README.md", "LICENSE"],
+  "scripts": {
+    "lint": "node --check lib/index.js && node --check lib/config.js",
+    "test": "node --test test/",
+    "check": "npm run lint && npm test"
+  },
+  "keywords": ["dsh-plugin", "deepseek-harness", "dsh", "cordis", "mcp", "bulkpublish", "social-media", "scheduling"],
+  "license": "MIT",
+  "author": "BulkPublish (https://www.bulkpublish.com)",
+  "homepage": "https://www.bulkpublish.com/integrations/mcp-server/",
+  "repository": { "type": "git", "url": "git+https://github.com/bulkpublish/dsh-plugin-bulkpublish.git" },
+  "bugs": { "url": "https://github.com/bulkpublish/dsh-plugin-bulkpublish/issues" },
+  "publishConfig": { "access": "public" },
+  "dsh": { "bundle": { "patch": "./cordis.patch.yml" } },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": ">=4.0.1-rc.1",
+    "@deepseek-ai/dsh-mcp-client": ">=0.0.1-rc.1"
+  },
+  "engines": { "node": ">=20" }
+}

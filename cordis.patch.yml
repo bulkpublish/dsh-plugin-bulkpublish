@@ -1,0 +1,8 @@
+# BulkPublish plugin (DSH bundle patch)
+# Inserted into the profile when this package is added as a bundle.
+# The API key is read at runtime from BULKPUBLISH_API_KEY; nothing is stored here.
+- insert:
+    - id: bulkpublish
+      name: 'dsh-plugin-bulkpublish'
+      config:
+        url: 'https://mcp.bulkpublish.com'
