@@ -1,6 +1,6 @@
 {
   "name": "dsh-plugin-bulkpublish",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "DeepSeek Harness (dsh) plugin for BulkPublish: connects dsh to the BulkPublish MCP server so the model can draft, schedule, publish and analyse social media posts, manage media, and handle inbox conversations and comments across 15 social platforms.",
   "icon": "assets/logo.png",
   "type": "module",
